@@ -63,7 +63,7 @@ set menu_scroll
 set tilde
 unset markers
 
-set mailcap_path = "~/.config/neomutt/mailcap"
+set mailcap_path = "~/.mailcap"
 set header_cache = "~/.cache/mutt"
 set message_cachedir = "~/.cache/mutt"
 
