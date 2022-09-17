@@ -1,0 +1,16 @@
+# Load Xresources
+xrdb -load ~/.Xresources
+
+# XDG PATHS
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+# Start compositor
+picom --config ~/.config/picom/picom.conf &
+
+# zsh config dir
+export ZDOTDIR=$HOME/.config/zsh
+
+# Start KDEconnect
+#/usr/lib/kdeconnectd &
