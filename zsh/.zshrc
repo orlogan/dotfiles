@@ -7,6 +7,15 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 alias ls='ls --color=auto'
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# add ability for nix to use zsh
+source $HOME/bin/zsh-nix-shell/nix-shell.plugin.zsh
+
+# add completion for nix
+source $HOME/bin/nix-zsh-completions/nix-zsh-completions.plugin.zsh
+fpath=($HOME/bin/nix-zsh-completions $fpath)
+autoload -U compinit && compinit
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/zsh/history
@@ -63,3 +72,5 @@ RANGER_LOAD_DEFAULT_RC=FALSE
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+[ -f "/home/occam/.ghcup/env" ] && source "/home/occam/.ghcup/env" # ghcup-env

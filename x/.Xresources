@@ -21,7 +21,7 @@ xscreensaver.fade:   false
 xscreensaver.unfade: false
 ! ===== urxvt =====
 URxvt.scrollBar: off
-URxvt.font: xft:monospace:size=12
+URxvt.font: xft:Iosevka Term:size=16
 URxvt.internalBorder:     22
 
 ! Dracula Xresources palette
