@@ -1,4 +1,4 @@
 ~/.fehbg &
-xmodmap ~/.Xmodmap
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 
 exec i3

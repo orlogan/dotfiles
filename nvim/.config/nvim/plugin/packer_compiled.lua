@@ -250,18 +250,13 @@ _G.packer_plugins = {
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
   },
-  ["vim-snippets"] = {
-    loaded = true,
-    path = "/home/occam/.local/share/nvim/site/pack/packer/start/vim-snippets",
-    url = "https://github.com/honza/vim-snippets"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
   vimtex = {
-    config = { "\27LJ\2\nù\1\0\0\2\0\a\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0K\0\1\0\1\0\1\14build_dir\nbuild\28vimtex_compiler_latexmk\26vimtex_syntax_enabled\fzathura\23vimtex_view_method\6g\bvim\0" },
+    config = { "\27LJ\2\nÔ\1\0\0\2\0\t\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0006\0\0\0009\0\1\0005\1\b\0=\1\a\0K\0\1\0\1\3\0\0\20Underfull \\hbox\19Overfull \\hbox#vimtex_quickfix_ignore_filters\1\0\1\14build_dir\nbuild\28vimtex_compiler_latexmk\26vimtex_syntax_enabled\fzathura\23vimtex_view_method\6g\bvim\0" },
     loaded = true,
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
@@ -277,7 +272,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: vimtex
 time([[Config for vimtex]], true)
-try_loadstring("\27LJ\2\nù\1\0\0\2\0\a\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0K\0\1\0\1\0\1\14build_dir\nbuild\28vimtex_compiler_latexmk\26vimtex_syntax_enabled\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")
+try_loadstring("\27LJ\2\nÔ\1\0\0\2\0\t\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0006\0\0\0009\0\1\0005\1\b\0=\1\a\0K\0\1\0\1\3\0\0\20Underfull \\hbox\19Overfull \\hbox#vimtex_quickfix_ignore_filters\1\0\1\14build_dir\nbuild\28vimtex_compiler_latexmk\26vimtex_syntax_enabled\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")
 time([[Config for vimtex]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)

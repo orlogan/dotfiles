@@ -85,4 +85,5 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- LuaSnip
-keymap("n", "<leader>ss", "<cmd>lua require(\"luasnip.loaders\").edit_snippet_files()<cr>", opts)
+keymap("n", "<leader>ss", "<cmd>UltiSnipsEdit<cr>", opts)
+keymap("n", "<leader>sr", "<cmd>call UltiSnips#RefreshSnippets()<cr>", opts)

@@ -89,7 +89,7 @@ return packer.startup(function(use)
 
   -- Snippet
   use { "SirVer/ultisnips" } -- snippet engine
-  use { "honza/vim-snippets" } -- snippet engine
+--  use { "honza/vim-snippets" } -- snippet library 
   use { "quangnguyen30192/cmp-nvim-ultisnips" } -- ultisnips completion
 
 
@@ -124,9 +124,13 @@ return packer.startup(function(use)
       vim.g.vimtex_compiler_latexmk = {
         build_dir = "build",
       }
+      vim.g.vimtex_quickfix_ignore_filters = {
+       'Underfull \\hbox',
+       'Overfull \\hbox',
+      }
+
     end
   }
-
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
