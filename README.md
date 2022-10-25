@@ -7,3 +7,4 @@ Fix the mess I made with my neomutt and [mutt wizard](https://muttwizard.com/)]
 - Integrate Dunst with music and volume
 - Setup Alerts through Dunst for battery
 - Make polybar better?
+- Setup hotkeys for using tabs in i3

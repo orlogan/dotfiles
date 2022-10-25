@@ -57,6 +57,10 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 
+-- insert various plugin items
+keymap("n", "<leader>ie", ":IconPickerNormal emoji<CR>", opts)
+keymap("n", "<leader>ii", ":IconPickerNormal nerd_font alt_font<CR>", opts)
+
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
