@@ -11,7 +11,22 @@ fi
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
+alias ls='exa -lahFHG\@ --git --group-directories-first --colour-scale --no-user --icons'
+alias cd='z'
+alias vi='nvim'
+alias n='nvim'
+alias untar='tar -zxvf'
+alias p='pacman'
+alias sp='sudo pacman'
+alias Syu='sudo pacman -Syu'
+alias ap='sudo pacman -S'
+# removes package and all dependencies
+# that arent also dependencies of something else
+alias rp='sudo pacman -Rs'
+
+alias conf='nvim $HOME/.dotfiles/README.md'
+alias music='ncmpcpp'
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -94,3 +109,5 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 
+
+source /home/occam/.config/broot/launcher/bash/br
