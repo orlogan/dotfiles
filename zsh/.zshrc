@@ -11,7 +11,8 @@ fi
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-# alias ls='ls --color=auto'
+
+
 alias ls='exa -lahFHG\@ --git --group-directories-first --colour-scale --no-user --icons'
 alias cd='z'
 alias vi='nvim'
@@ -30,7 +31,10 @@ alias music='ncmpcpp'
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
+# Print color test on startup
+source $HOME/bin/colors
 
 # add ability for nix to use zsh
 source $HOME/bin/zsh-nix-shell/nix-shell.plugin.zsh
