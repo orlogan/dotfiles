@@ -23,6 +23,12 @@ snippet table "Table environment" b
 \end{table}
 endsnippet
 
+snippet beg "begin{} / end{}" bA
+\\begin{$1}
+	$0
+\\end{$1}
+endsnippet
+
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
@@ -150,6 +156,22 @@ snippet >> "to" iA
 endsnippet
 
 context "math()"
+snippet /> "Maps to" iA
+\mapsto 
+endsnippet
+
+context "math()"
+snippet fc "Function composition" iA
+\circ 
+endsnippet
+
+context "math()"
+snippet sc "Cross Product" iA
+\times
+endsnippet
+
+
+context "math()"
 snippet ma "Map definition" iA
 ${1:${VISUAL}} : ${2:X} \to ${3:Y} 
 endsnippet
@@ -197,6 +219,16 @@ endsnippet
 # Alg Top and Cat Theory
 #
 #
+
+context "math()"
+snippet hom "Homotopy" iA
+\simeq 
+endsnippet
+
+context "math()"
+snippet heo "Homeomorphism" iA
+\cong  
+endsnippet
 
 context "math()"
 snippet fgp "Fundamental Groupoid" iA
