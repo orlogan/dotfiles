@@ -34,7 +34,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
 # Print color test on startup
-source $HOME/bin/colors
+# source $HOME/bin/colors
 
 # add ability for nix to use zsh
 source $HOME/bin/zsh-nix-shell/nix-shell.plugin.zsh

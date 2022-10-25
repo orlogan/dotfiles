@@ -2,7 +2,7 @@
 
 # This config file will use environment variables such as $BROWSER and $TERMINAL.
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id autotiling
 # notification manager
 exec_always --no-startup-id /usr/bin/dunst
@@ -17,7 +17,6 @@ set $mod Mod4
 set $alt Mod1
 set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
-set $lock i3lock
 set $suspend sudo systemctl suspend
 set $hibernate sudo -A systemctl hibernate
 
@@ -53,8 +52,9 @@ bindsym $mod+Shift+q		        [con_id="__focused__" instance="^(?!dropdown_).*$"
 bindsym $mod+w 			            exec --no-startup-id brave
 
 # c
-bindsym $mod+c 			            exec --no-startup-id lock
-bindsym $mod+Shift+c		        exec --no-startup-id $suspend
+bindsym $mod+c 			            exec $HOME/bin/lock
+# bindsym $mod+Shift+c		        exec --no-startup-id $suspend
+bindsym $mod+Shift+c		        exec --no-startup-id dunstify
 
 # For VSCode code-insiders
 # e
@@ -66,7 +66,7 @@ bindsym $mod+r 			            exec $term -e ranger
 bindsym $mod+Shift+r		        exec --no-startup-id winresize
 
 # t
-bindsym $mod+t 			            exec $term -e htop
+bindsym $mod+t 			            workspace 5; exec $term -e htop; focus
 bindsym $mod+Shift+t            focus mode_toggle
 
 # y
@@ -81,11 +81,11 @@ bindsym $mod+i                  fullscreen disable; floating enable; resize set 
 bindsym $mod+Shift+i 	          floating toggle
 
 # o
-bindsym $mod+o			            exec --no-startup-id $term -e nvim ~/Repos/blog/content
+# bindsym $mod+o			            exec --no-startup-id $term -e nvim ~/Repos/blog/content
 # bindsym $mod+Shift			        exec --no-startup-id $term -e nvim ~/Repos
 
 # a
-bindsym $mod+a		              exec $term -e alsamixer
+# bindsym $mod+a		              exec $term -e alsamixer
 
 # s
 bindsym $mod+s        			    exec --no-startup-id wmfocus -f "Iosevka Term":100 
@@ -126,7 +126,7 @@ bindsym $mod+Ctrl+l		          move workspace to output right
 # bindsym $mod+semicolon 			    exec --no-startup-id skippy-xd
 
 # z
-bindsym $mod+z			            exec --no-startup-id $term -e nvim ~/.zshrc
+bindsym $mod+z			            exec --no-startup-id $term -e nvim ~/.dotfiles
 
 # x
 bindsym $mod+x 			            exec --no-startup-id $reboot
@@ -144,8 +144,9 @@ bindsym $mod+v			            exec --no-startup-id mpv /dev/video0
 bindsym $mod+b			            exec --no-startup-id feh --bg-fill ~/Pictures/dracula-soft-waves-6272a4.png
 
 # n
-bindsym $mod+n			            exec --no-startup-id neovim
-bindsym $mod+Shift+n			            exec --no-startup-id kill -s USR1 $(pidof deadd-notification-center)
+# bindsym $mod+n			            exec --no-startup-id neovim
+# Not for my notification package
+# bindsym $mod+Shift+n			            exec --no-startup-id kill -s USR1 $(pidof deadd-notification-center)
 
 # m
 bindsym $mod+m		              exec $term -e ncmpcpp
@@ -214,10 +215,10 @@ for_window [window_role="GtkFileChooserDialog"] move position center
 
 # #---Function Buttons---# #
 bindsym $mod+F1		        restart
-bindsym $mod+F2		        exec --no-startup-id screenkey -s small --scr 1 -p fixed -g 600x100+2573+1330 --opacity .9 --font-color white
+bindsym $mod+F2		        exec --no-startup-id screenkey -p fixed -g 90%x10%+5%-10% --opacity .9 --font-color white
 bindsym $mod+F3	          exec --no-startup-id killall screenkey
 # Wifi TUI
-bindsym $mod+F12	        exec $term -e nmtui
+bindsym $mod+F11	        exec $term -e nmtui
 
 # #---Arrow Keys---# #
 bindsym $mod+Left		      focus left
@@ -253,3 +254,13 @@ client.background       #F8F8F2
 
 # TODO Use this to replace current search key
 #bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
+
+
+bar {
+    font pango:Iosevka Term 10
+    position top
+    status_command bumblebee-status \
+     -m cpu memory battery time pasink pasource \
+     -p time.format="%H:%M" \
+     -t dracula-powerline
+}
