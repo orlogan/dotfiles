@@ -49,7 +49,8 @@ bindsym $mod+q			            [con_id="__focused__" instance="^(?!dropdown_).*$"]
 bindsym $mod+Shift+q		        [con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
 
 # w
-bindsym $mod+w 			            exec --no-startup-id brave
+# Brave is a web browser idc about
+# bindsym $mod+w 			            exec --no-startup-id brave
 
 # c
 bindsym $mod+c 			            exec $HOME/bin/lock
@@ -217,8 +218,12 @@ for_window [window_role="GtkFileChooserDialog"] move position center
 bindsym $mod+F1		        restart
 bindsym $mod+F2		        exec --no-startup-id screenkey -p fixed -g 90%x10%+5%-10% --opacity .9 --font-color white
 bindsym $mod+F3	          exec --no-startup-id killall screenkey
+# Screenshots
+bindsym $mod+F10			            exec --no-startup-id flameshot gui -p ~/Pictures/Screenshots
+bindsym $mod+Shift+F10		        exec --no-startup-id flameshot full -p ~/Pictures/Screenshots
+
 # Wifi TUI
-bindsym $mod+F11	        exec $term -e nmtui
+bindsym $mod+F11	        exec --no-startup-id networkmanager_dmenu
 
 # #---Arrow Keys---# #
 bindsym $mod+Left		      focus left
