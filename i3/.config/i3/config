@@ -33,7 +33,7 @@ bindsym $mod+Return 		         exec $term
 bindsym $mod+Shift+Return	       exec $term --working-directory  $(xcwd)
 
 # TODO Setup greeter?
-bindsym $mod+Escape	             exec --no-startup-id dm-tool switch-to-greeter
+bindsym $mod+Escape	             exec --no-startup-id $HOME/.config/rofi/powermenu/type-1/powermenu.sh
 bindsym $mod+Shift+Escape	       exec --no-startup-id $hibernate
 
 # bindsym $mod+BackSpace
@@ -94,8 +94,7 @@ bindsym $mod+Shift+s			      split toggle
 
 # d
 # bindsym $mod+d                  exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu_run -b -i -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
-bindsym $mod+d                  exec --no-startup-id rofi -show run
-
+bindsym $mod+d                  exec --no-startup-id ~/.config/rofi/launchers/type-4/launcher.sh
 # f
 bindsym $mod+f			            fullscreen toggle
 bindsym $mod+Shift+f 	          floating toggle
@@ -261,22 +260,16 @@ client.background       #F8F8F2
 #bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
 
 
-# bar {
-#     font pango:Iosevka Term 10
-#     position top
-#     status_command bumblebee-status \
-#      -m cpu memory battery time pasink pasource \
-#      -p time.format="%H:%M" \
-#      -t dracula-powerline
-# }
-
 bar {
   font pango:Iosevka 12
         #status_command i3status
 	status_command bumblebee-status \
 	  -t  dracula-powerline \
-	  -m  date time battery pasink dunst \
-	  -p  date.format="%b %d %Y"
+	  -m  mpd pasink network battery time dunst \
+	  -p  mpd.format="{artist} - {title}" \
+        mpd.layout="mpd.main" \
+        time.format="%-I:%M%p" \
+
 
 
 colors {
