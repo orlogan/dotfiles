@@ -85,6 +85,13 @@ else:
     snip.rv = ''
 `$2
 endsnippet
+
+snippet dm "Math" wA
+\[
+${1:${VISUAL}}
+.\] $0
+endsnippet
+
 # A string of char followed by 1 or 2 numbers 
 # turns into subscript
 context "math()"
@@ -167,7 +174,7 @@ endsnippet
 
 context "math()"
 snippet sc "Cross Product" iA
-\times
+\times 
 endsnippet
 
 
@@ -197,6 +204,18 @@ snippet "([a-zA-Z])bar" "bar" riA
 \overline{`!p snip.rv=match.group(1)`}
 endsnippet
 
+priority 10
+context "math()"
+snippet "til" "tilde" riA
+\widetilde{$1}$0
+endsnippet
+
+priority 100
+context "math()"
+snippet "([a-zA-Z])til" "tilde" riA
+\widetilde{`!p snip.rv=match.group(1)`}
+endsnippet
+
 
 #
 # Letters/Variables
@@ -211,6 +230,12 @@ context "math()"
 snippet RR "real" iA
 \R^{$1} 
 endsnippet
+
+context "math()"
+snippet ZZ "integers" iA
+\mathbb{Z}
+endsnippet
+
 
 
 
@@ -242,7 +267,7 @@ endsnippet
 
 context "math()"
 snippet nhg "n-homotopy group of pointed pair" iA
-\pi_{${1:1}}(${2:X}, ${3:Y}, ${4:\ast}) $0
+\pi_{${1:1}}(${2:X}, ${3:x_0}) $0
 endsnippet
 
 

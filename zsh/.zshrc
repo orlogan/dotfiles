@@ -26,6 +26,8 @@ alias ap='sudo pacman -S'
 # that arent also dependencies of something else
 alias rp='sudo pacman -Rs'
 
+alias t='todo.sh'
+
 alias conf='nvim $HOME/.dotfiles/README.md'
 alias music='ncmpcpp'
 

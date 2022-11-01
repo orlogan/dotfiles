@@ -15,3 +15,6 @@ Fix the mess I made with my neomutt and [mutt wizard](https://muttwizard.com/)]
 - setup mpd rofi integration
 - setup bumblestatus rofi integration
 - commit everything and such
+- fix picom not starting on bootup
+
+- Fix rofi-calc aesthetic

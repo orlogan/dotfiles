@@ -281,6 +281,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: icon-picker.nvim
+time([[Config for icon-picker.nvim]], true)
+try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\28disable_legacy_commands\2\nsetup\16icon-picker\frequire\0", "config", "icon-picker.nvim")
+time([[Config for icon-picker.nvim]], false)
 -- Config for: leap.nvim
 time([[Config for leap.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\24set_default_keymaps\tleap\frequire\0", "config", "leap.nvim")
@@ -289,14 +297,6 @@ time([[Config for leap.nvim]], false)
 time([[Config for vimtex]], true)
 try_loadstring("\27LJ\2\nï\1\0\0\2\0\t\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0006\0\0\0009\0\1\0005\1\b\0=\1\a\0K\0\1\0\1\3\0\0\20Underfull \\hbox\19Overfull \\hbox#vimtex_quickfix_ignore_filters\1\0\1\14build_dir\nbuild\28vimtex_compiler_latexmk\26vimtex_syntax_enabled\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")
 time([[Config for vimtex]], false)
--- Config for: icon-picker.nvim
-time([[Config for icon-picker.nvim]], true)
-try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\28disable_legacy_commands\2\nsetup\16icon-picker\frequire\0", "config", "icon-picker.nvim")
-time([[Config for icon-picker.nvim]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

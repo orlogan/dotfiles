@@ -1,0 +1,4 @@
+(C) test rofi
+(C) setup completion for todotxt
+(D) setup due time integration with notifications
+(A) setup chronjob to regularly upload config to github
