@@ -7,7 +7,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
 # Start compositor
-picom --config ~/.config/picom/picom.conf &
+# picom --config ~/.config/picom/picom.conf &
 
 # zsh config dir
 export ZDOTDIR=$HOME/.config/zsh

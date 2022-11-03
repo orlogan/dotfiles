@@ -109,6 +109,9 @@ return packer.startup(function(use)
     commit = "518e27589c0463af15463c9d675c65e464efc2fe",
   }
 
+  -- rust 
+  use 'simrat39/rust-tools.nvim'
+
   -- emoji and icons
   use({
     "ziontee113/icon-picker.nvim",

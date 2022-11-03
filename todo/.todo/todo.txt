@@ -1,4 +1,6 @@
-(C) test rofi
-(C) setup completion for todotxt
 (D) setup due time integration with notifications
 (A) setup chronjob to regularly upload config to github
+(A) Figure out how to setup vpn
+x 2022-11-02 2022-11-02 Setup launcher due:2022-11-02 pri:C
+(B) 2022-11-03 Upload review solutions +teaching due:2022-11-04
+(A) 2022-11-03 Rewrite Exam Three +teaching due:2022-11-06

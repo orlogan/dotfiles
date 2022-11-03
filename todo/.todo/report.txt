@@ -1,0 +1,3 @@
+x 2022-11-02 test rofi pri:C
+x 2022-11-02 Setup pass database from lastpass and do syncthing int pri:A
+x 2022-11-03 setup completion for todotxt pri:C

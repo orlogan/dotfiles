@@ -1,7 +1,7 @@
 ### Directories ###
-ncmpcpp_directory = ~/.config/ncmpcpp
+ncmpcpp_directory = "~/.config/ncmpcpp"
 #lyrics_directory  = ~/.config/ncmpcpp/lyrics
-mpd_music_dir     = ~/Music
+mpd_music_dir     = "~/Music"
 
 ### Behaviour ###
 # execute_on_song_change = "bash ~/.config/ncmpcpp/mpd-notification"
@@ -54,8 +54,8 @@ main_window_color = "blue"
 current_item_prefix = "$(blue)$r"
 current_item_suffix = "$/r$(end)"
 
-current_item_inactive_column_prefix = red
-current_item_inactive_column_suffix = red
+# current_item_inactive_column_prefix = red
+# current_item_inactive_column_suffix = red
 
 color1 = "white"
 color2 = "red"
