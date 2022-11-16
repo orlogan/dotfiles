@@ -16,13 +16,14 @@ set $outer_gaps 0
 set $term --no-startup-id kitty
 set $mod Mod4
 set $alt Mod1
-set $shutdown sudo -A shutdown -h now
-set $reboot sudo -A reboot
-set $suspend sudo systemctl suspend
-set $hibernate sudo -A systemctl hibernate
+set $shutdown shutdown -h now
+set $reboot reboot
+set $suspend systemctl suspend
+set $hibernate systemctl hibernate
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
 
 # #---Gaps---# #
 for_window [class="^.*"] border pixel 2
@@ -40,7 +41,6 @@ bindsym $mod+Shift+Escape	       exec --no-startup-id $hibernate
 # bindsym $mod+BackSpace
 # bindsym $mod+Shift+BackSpace	   exec --no-startup-id prompt "Reboot computer?" $reboot
 
-# TODO WTF is this
 # space
 bindsym $mod+space 			         exec $term -e ranger 
 
