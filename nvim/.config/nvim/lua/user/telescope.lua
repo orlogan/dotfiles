@@ -5,9 +5,6 @@ end
 
 local actions = require "telescope.actions"
 
--- lets us look through emoji
-telescope.load_extension "ui-select"
-
 telescope.setup {
   defaults = {
 

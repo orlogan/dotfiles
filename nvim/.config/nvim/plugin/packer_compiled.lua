@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/occam/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   ["dracula.nvim"] = {
     loaded = true,
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/dracula.nvim",
@@ -128,12 +133,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  ["icon-picker.nvim"] = {
-    config = { "\27LJ\2\nY\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\28disable_legacy_commands\2\nsetup\16icon-picker\frequire\0" },
-    loaded = true,
-    path = "/home/occam/.local/share/nvim/site/pack/packer/start/icon-picker.nvim",
-    url = "https://github.com/ziontee113/icon-picker.nvim"
   },
   ["impatient.nvim"] = {
     loaded = true,
@@ -156,11 +155,26 @@ _G.packer_plugins = {
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/occam/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/occam/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   neorg = {
-    config = { "\27LJ\2\n1\0\0\2\0\3\0\0055\0\0\0004\1\0\0=\1\1\0007\0\2\0K\0\1\0\tload\18core.defaults\1\0\0\0" },
+    config = { "\27LJ\2\n�\a\0\0\t\0:\0C6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\0028\0005\3\3\0004\4\0\0=\4\4\0035\4\b\0005\5\6\0005\6\5\0=\6\a\5=\5\t\4=\4\n\0035\4\f\0005\5\v\0=\5\t\4=\4\r\0035\4\17\0005\5\14\0005\6\15\0=\6\16\5=\5\t\4=\4\18\0035\4\20\0005\5\19\0=\5\t\4=\4\21\0034\4\0\0=\4\22\0035\0046\0005\5\23\0005\6\25\0005\a\24\0=\a\26\0065\a\27\0005\b\28\0=\b\29\a5\b\30\0=\b\31\a5\b \0=\b!\a5\b\"\0=\b#\a5\b$\0=\b%\a=\a&\0065\a'\0005\b(\0=\b)\a5\b*\0=\b+\a5\b,\0=\b-\a5\b.\0=\b/\a5\b0\0=\b1\a5\b2\0=\b3\a=\a4\6=\0065\5=\5\t\4=\0047\3=\0039\2B\0\2\1K\0\1\0\tload\1\0\0\24core.norg.concealer\1\0\0\nicons\fheading\flevel_6\1\0\1\ticon\r     ⋄\flevel_5\1\0\1\ticon\f    ⟡\flevel_4\1\0\1\ticon\v   ❖\flevel_3\1\0\1\ticon\n  ◆\flevel_2\1\0\1\ticon\t ◇\flevel_1\1\0\1\ticon\b◈\1\0\1\fenabled\2\ttodo\14cancelled\1\0\1\ticon\b\fon_hold\1\0\1\ticon\b\vurgent\1\0\1\ticon\b\14uncertain\1\0\1\ticon\6?\fpending\1\0\1\ticon\b\1\0\1\venable\2\vmarker\1\0\0\1\0\2\ticon\t \fenabled\2\1\0\2\18markup_preset\fconceal\16icon_preset\fdiamond core.integrations.telescope\25core.norg.completion\1\0\0\1\0\1\vengine\rnvim-cmp\18core.gtd.base\1\0\0\fexclude\1\2\0\0\nnotes\1\0\1\14workspace\bgtd\18core.keybinds\1\0\0\1\0\2\21default_keybinds\2\17neorg_leader\6,\21core.norg.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\2\bgtd ~/Documents/notes/neorg/gtd\fjournal%~/Documents/notes/neorg/journal/\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
     loaded = true,
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/neorg",
     url = "https://github.com/nvim-neorg/neorg"
+  },
+  ["neorg-telescope"] = {
+    loaded = true,
+    path = "/home/occam/.local/share/nvim/site/pack/packer/start/neorg-telescope",
+    url = "https://github.com/nvim-neorg/neorg-telescope"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -186,11 +200,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/home/occam/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -252,6 +261,11 @@ _G.packer_plugins = {
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/occam/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ultisnips = {
     loaded = true,
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/ultisnips",
@@ -279,7 +293,6 @@ _G.packer_plugins = {
     url = "https://github.com/lervag/vimtex"
   },
   ["which-key.nvim"] = {
-    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
     loaded = true,
     path = "/home/occam/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
@@ -287,22 +300,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
--- Config for: icon-picker.nvim
-time([[Config for icon-picker.nvim]], true)
-try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\28disable_legacy_commands\2\nsetup\16icon-picker\frequire\0", "config", "icon-picker.nvim")
-time([[Config for icon-picker.nvim]], false)
--- Config for: neorg
-time([[Config for neorg]], true)
-try_loadstring("\27LJ\2\n1\0\0\2\0\3\0\0055\0\0\0004\1\0\0=\1\1\0007\0\2\0K\0\1\0\tload\18core.defaults\1\0\0\0", "config", "neorg")
-time([[Config for neorg]], false)
 -- Config for: leap.nvim
 time([[Config for leap.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\24set_default_keymaps\tleap\frequire\0", "config", "leap.nvim")
 time([[Config for leap.nvim]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\n�\a\0\0\t\0:\0C6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\0028\0005\3\3\0004\4\0\0=\4\4\0035\4\b\0005\5\6\0005\6\5\0=\6\a\5=\5\t\4=\4\n\0035\4\f\0005\5\v\0=\5\t\4=\4\r\0035\4\17\0005\5\14\0005\6\15\0=\6\16\5=\5\t\4=\4\18\0035\4\20\0005\5\19\0=\5\t\4=\4\21\0034\4\0\0=\4\22\0035\0046\0005\5\23\0005\6\25\0005\a\24\0=\a\26\0065\a\27\0005\b\28\0=\b\29\a5\b\30\0=\b\31\a5\b \0=\b!\a5\b\"\0=\b#\a5\b$\0=\b%\a=\a&\0065\a'\0005\b(\0=\b)\a5\b*\0=\b+\a5\b,\0=\b-\a5\b.\0=\b/\a5\b0\0=\b1\a5\b2\0=\b3\a=\a4\6=\0065\5=\5\t\4=\0047\3=\0039\2B\0\2\1K\0\1\0\tload\1\0\0\24core.norg.concealer\1\0\0\nicons\fheading\flevel_6\1\0\1\ticon\r     ⋄\flevel_5\1\0\1\ticon\f    ⟡\flevel_4\1\0\1\ticon\v   ❖\flevel_3\1\0\1\ticon\n  ◆\flevel_2\1\0\1\ticon\t ◇\flevel_1\1\0\1\ticon\b◈\1\0\1\fenabled\2\ttodo\14cancelled\1\0\1\ticon\b\fon_hold\1\0\1\ticon\b\vurgent\1\0\1\ticon\b\14uncertain\1\0\1\ticon\6?\fpending\1\0\1\ticon\b\1\0\1\venable\2\vmarker\1\0\0\1\0\2\ticon\t \fenabled\2\1\0\2\18markup_preset\fconceal\16icon_preset\fdiamond core.integrations.telescope\25core.norg.completion\1\0\0\1\0\1\vengine\rnvim-cmp\18core.gtd.base\1\0\0\fexclude\1\2\0\0\nnotes\1\0\1\14workspace\bgtd\18core.keybinds\1\0\0\1\0\2\21default_keybinds\2\17neorg_leader\6,\21core.norg.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\2\bgtd ~/Documents/notes/neorg/gtd\fjournal%~/Documents/notes/neorg/journal/\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
 -- Config for: vimtex
 time([[Config for vimtex]], true)
 try_loadstring("\27LJ\2\n�\1\0\0\2\0\t\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0006\0\0\0009\0\1\0005\1\b\0=\1\a\0K\0\1\0\1\3\0\0\20Underfull \\hbox\19Overfull \\hbox#vimtex_quickfix_ignore_filters\1\0\1\14build_dir\nbuild\28vimtex_compiler_latexmk\26vimtex_syntax_enabled\fzathura\23vimtex_view_method\6g\bvim\0", "config", "vimtex")

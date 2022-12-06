@@ -9,14 +9,6 @@ local function on_attach(client, buffer)
   -- we could set keymaps related to LSP, etc here.
 end
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.rs",
-  callback = function()
-   vim.lsp.buf.formatting_sync(nil, 200)
-  end,
-  group = format_sync_grp,
-})
-
 -- Configure LSP through rust-tools.nvim plugin.
 -- rust-tools will configure and enable certain LSP features for us.
 -- See https://github.com/simrat39/rust-tools.nvim#configuration
@@ -53,4 +45,3 @@ local opts = {
 }
 
 require("rust-tools").setup(opts)
-

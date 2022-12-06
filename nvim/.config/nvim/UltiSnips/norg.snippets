@@ -1,0 +1,14 @@
+snippet newNote "Setup for Basic Note" 
+@document.meta
+  title: `!p snip.rv = snip.basename`
+  description: ${1:PlaceHolder}
+  author: occam
+  categories: ${2:wip}
+  created: `date +%d.%m.%y`
+@end
+
+= TOC
+
+* $0
+endsnippet
+

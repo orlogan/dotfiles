@@ -1,3 +1,8 @@
+local status_ok, wk = pcall(require, "which-key")
+if not status_ok then
+	return
+end
+
 -- Shorten function name
 local keymap = vim.keymap.set
 -- Silent keymap option
@@ -41,14 +46,14 @@ keymap("n", "<C-x>", "<cmd>Bdelete!<CR>", opts)
 
 -- Save and Quit
 keymap("n", "<C-s>", ":w<CR>", opts)
-keymap("n", "<C-q>", ":q!<CR>", opts)
+keymap("n", "<C-q>", ":q<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "<C-g>", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -57,27 +62,21 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 
--- insert various plugin items
-keymap("n", "<leader>ie", ":IconPickerNormal emoji<CR>", opts)
-keymap("n", "<leader>ii", ":IconPickerNormal nerd_font alt_font<CR>", opts)
-
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope current_buffer_fuzzy_find<CR>", opts)
-keymap("n", "<leader>fj", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>fl", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
-
-keymap("n", "<leader>pp", ":Telescope projects<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Comment
-keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
+keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
+keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
@@ -93,3 +92,11 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 -- LuaSnip
 keymap("n", "<leader>ss", "<cmd>UltiSnipsEdit<cr>", opts)
 keymap("n", "<leader>sr", "<cmd>call UltiSnips#RefreshSnippets()<cr>", opts)
+
+wk.register({
+  ["<leader>f"] = {name = "Files"},
+  ["<leader>s"] = {name = "Snippets"},
+  ["<leader>d"] = {name = "DAP"},
+  ["<leader>g"] = {name = "Git"},
+  ["<leader>/"] = {name = "Comment Line"}
+})

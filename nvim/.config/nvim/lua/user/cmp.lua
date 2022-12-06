@@ -3,6 +3,7 @@ if not cmp_status_ok then
 	return
 end
 
+
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
@@ -105,6 +106,7 @@ cmp.setup({
 		{ name = "nvim_lua" },
 		{ name = "luasnip" },
 		{ name = "ultisnips" },
+		{ name = "neorg" },
 		{ name = "buffer" },
 		{ name = "path" },
 	},
