@@ -105,6 +105,12 @@ snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
 endsnippet
 
 context "math()"
+snippet _ "auto bracket for subscript" iA
+_{${1:${VISUAL}}}$0
+endsnippet
+
+
+context "math()"
 snippet sr "\sqrt{}" iA
 \sqrt{${1:${VISUAL}}} $0
 endsnippet

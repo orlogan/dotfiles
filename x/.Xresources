@@ -6,8 +6,7 @@
 ! ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚══════╝░╚═════╝░░╚═════╝░╚═╝░░╚═╝░╚═════╝╚══════╝╚══════╝
 !
 ! -----------------------------------
-Xft.dpi: 102
-!Xft.dpi: 96
+Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
@@ -16,7 +15,7 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 
 Xcursor.theme:       Catppuccin-Frappe-Green
-Xcursor.size:	     64
+Xcursor.size:	     16
 xscreensaver.fade:   false
 xscreensaver.unfade: false
 ! ===== urxvt =====

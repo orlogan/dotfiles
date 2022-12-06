@@ -1,3 +1,14 @@
+# # Zsh start up sequence:
+#  1) /etc/zshenv   -> Always run for every zsh.   (login + interactive + other)
+#  2)   ~/.zshenv   -> Usually run for every zsh.  (login + interactive + other)
+#  3) /etc/zprofile -> Run for login shells.       (login)
+#  4)   ~/.zprofile -> Run for login shells.       (login)
+#  5) /etc/zshrc    -> Run for interactive shells. (login + interactive)
+#  6)   ~/.zshrc    -> Run for interactive shells. (login + interactive)
+#  7) /etc/zlogin   -> Run for login shells.       (login)
+#  8)   ~/.zlogin   -> Run for login shells.       (login)
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -13,21 +24,13 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 
 
 
-alias ls='exa -lahFHG\@ --git --group-directories-first --colour-scale --no-user --icons'
-alias cd='z'
+
+alias l='exa -lahFHG\@ --git --group-directories-first --colour-scale --no-user --icons'
 alias vi='nvim'
 alias n='nvim'
+alias e='emacsclient -c'
 alias untar='tar -zxvf'
-alias p='pacman'
-alias sp='sudo pacman'
-alias Syu='sudo pacman -Syu'
 alias ap='sudo pacman -S'
-# removes package and all dependencies
-# that arent also dependencies of something else
-alias rp='sudo pacman -Rs'
-
-alias t='todo.sh'
-alias ta='todo.sh add'
 
 alias conf='nvim $HOME/.dotfiles/README.md'
 alias music='ncmpcpp'

@@ -42,7 +42,7 @@ bindsym $mod+Shift+Escape	       exec --no-startup-id $hibernate
 # bindsym $mod+Shift+BackSpace	   exec --no-startup-id prompt "Reboot computer?" $reboot
 
 # space
-bindsym $mod+space 			         exec $term -e ranger 
+bindsym $mod+space 			         exec $term -e nnn
 
 
 # #---Letter Key Bindings---# #
@@ -60,7 +60,7 @@ bindsym $mod+Shift+c		        exec --no-startup-id dunstify
 
 # For VSCode code-insiders
 # e
-# bindsym $mod+e 			            exec --no-startup-id code-insiders -n
+bindsym $mod+e 			            exec --no-startup-id emacsclient -c
 # bindsym $mod+Shift+e		        exec $term -e code-insiders
 
 # r

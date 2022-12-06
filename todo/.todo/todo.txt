@@ -6,3 +6,4 @@ x 2022-11-02 2022-11-02 Setup launcher due:2022-11-02 pri:C
 (Z) 2022-11-03 Set night light during bed time +autoidsa
 (A) 2022-11-03 Fic password git due:2022-11-04
 (A) 2022-11-03 +quicktask +teaching +autoidsa occamoccam.crabdance.com is the nextcloudpi website rn
+2022-11-03 Taskwarrior instead of todotxt
