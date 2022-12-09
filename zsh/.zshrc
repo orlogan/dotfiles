@@ -26,6 +26,7 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 
 
 alias l='exa -lahFHG\@ --git --group-directories-first --colour-scale --no-user --icons'
+alias c='z'
 alias vi='nvim'
 alias n='nvim'
 alias e='emacsclient -c'
